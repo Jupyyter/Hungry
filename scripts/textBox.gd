@@ -69,6 +69,8 @@ func _process(delta):
 					end_symbol.text = ":)"
 					currentStateList2[LabelList2.find(lbl)] = State.finished
 					current_state= State.finished
+					IndexChosen=0
+					lastIndexChosen=0
 			State.finished:
 				#ui_accept must be set in godot
 				if Input.is_action_just_pressed("ui_accept") or fastText:
@@ -124,8 +126,10 @@ func displayText(lbl:Label)->void:
 						fastText=true
 					"-0.03":
 						CHAR_READ_RATE=0.03
-					"-0.01":
+					"-0.001":
 						CHAR_READ_RATE=0.001
+					"-0.04":
+						CHAR_READ_RATE=0.04
 					_:
 						before=before.substr(1)
 						setTexture(before)
@@ -230,7 +234,8 @@ func choosingResponse()->int:
 	elif IndexChosen!=lastIndexChosen:
 		LabelList2[lastIndexChosen].remove_theme_stylebox_override("normal")
 		lastIndexChosen=IndexChosen
-		
+	
+	print(IndexChosen)
 	return IndexChosen
 
 #returns a reference to an object within the array
@@ -304,6 +309,8 @@ func isReading()->bool:
 
 #4 AM :)
 #https://en.wikipedia.org/wiki/Circadian_rhythm_sleep_disorder
+#i feel like this:
+#https://cdn.discordapp.com/attachments/969231182304784446/1161107444940947528/f87d1ca0fac422b031195d6853115435.jpg?ex=65371893&is=6524a393&hm=822d970b9b03c912dd175e1f0a489a4d1b0bec647fc7729fe7f5c261df2b5ba0&
 """
 ⣯⢻⡝⣯⡝⣯⡝⣯⢻⡝⣯⢻⡝⣯⢻⡝⣯⣛⡟⣿⢲⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⠶⠒⠛⠉⠉⠀⣤⣀⣀⠀⠉⠉⢳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⢠⡾⠁⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠈⢂⠀
 ⠓⠯⣞⡵⣛⡶⡽⣭⢗⣯⢽⡳⢯⣝⣳⢯⣳⡭⣟⡞⣧⣛⢮⡷⢦⣄⣀⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⢷⣤⣀⡀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣴⡾⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠒⣄⠀⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠢⡀⢣

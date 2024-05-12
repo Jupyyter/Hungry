@@ -46,6 +46,7 @@ func _ready():
 
 	#intro
 	else:
+		audio.playMusic()
 		gabriel.visible=true
 		text_box.queue_text("this is Gabriel
 		intelligence: not much
@@ -63,48 +64,56 @@ func _process(delta):
 		if (globals.npcTriggered.has("mihai") and globals.npcTriggered["mihai"]):
 			match part:
 				0:
+					audio.playMusic("dramatic")
 					self.visible=false
-					text_box.queue_text("and so")
+					text_box.queue_text("and so--fast--0.04")
 					part+=1
 				1:
-					if textReady():
+					if audio.passed(5.66):
 						bloodRoom4.visible=true
 						self.visible=true
-						text_box.queue_text("gabriel ate a 3 month old baby
-						imagine eating a 3 month old baby")
+						text_box.queue_text("gabriel ate a 3 month old baby--fast--0.04")
 						part+=1
 				2:
-					if textReady():
-						bloodRoom4.visible=false
-						hallWay.visible=true
-						text_box.queue_text("after gabriel ate a 3 month old snack, he was kicked out of the hospital
-						he then reformed and became a vegetarian")
+					if audio.passed(11.32):
+						text_box.queue_text("imagine eating a 3 month old baby--fast--0.04")
 						part+=1
 				3:
-					if textReady():
-						hallWay.visible=false
-						town2.visible=true
-						text_box.queue_text("gabriel beeng a vegetarian:")
+					if audio.passed(16.98):
+						bloodRoom4.visible=false
+						hallWay.visible=true
+						text_box.queue_text("after gabriel ate a 3 month old snack, he was kicked out of the hospital--fast--0.04")
 						part+=1
 				4:
-					if textReady():
-						town2.visible=false
-						hallWay2.visible=true
-						text_box.queue_text("after 2 years gabriel returned to the hospital")
+					if audio.passed(22.64):
+						text_box.queue_text("he then reformed and became a vegetarian--fast--0.04")
 						part+=1
 				5:
-					if textReady():
-						hallWay2.visible=false
-						hallWay3.visible=true
-						text_box.queue_text("then he tripped and died
-						he was in a hospital but nobody liked gabriel so they let him die")
+					if audio.passed(28.3):
+						hallWay.visible=false
+						town2.visible=true
+						text_box.queue_text("gabriel beeng a vegetarian:--fast--0.04")
 						part+=1
 				6:
-					if textReady():
-						hallWay3.visible=false
-						text_box.queue_text("the end
-						moral of the story: dont trip and die")
+					if audio.passed(33.96):
+						town2.visible=false
+						hallWay2.visible=true
+						text_box.queue_text("after 2 years gabriel returned to the hospital--fast--0.04")
 						part+=1
+				7:
+					if audio.passed(39.62):
+						hallWay2.visible=false
+						hallWay3.visible=true
+						text_box.queue_text("then he tripped and died--fast--0.04")
+						part+=1
+				8:
+					if audio.passed(45.28):
+						text_box.queue_text("he was in a hospital but nobody liked gabriel so they let him die--fast--0.04")
+						part+=1
+				9:
+					if audio.passed(51):
+						self.visible=false
+						text_box.queue_text("rip gabriel ♿🤓🏳️‍🌈ඞා--0.04")
 
 		elif globals.inHospital:
 			get_tree().change_scene_to_file("scenes/hospitalRoom1.tscn")
@@ -116,12 +125,11 @@ func _process(delta):
 			else:
 				house.visible=true
 				text_box.queue_text("after gabriel ate flapjack, he was kicked out from his home
-				homeless? (imagine the blue large headed alien)
-				oh wait
 				homeless?--megamind
 				what adventures awaits him outside?
 				how many humans will he eat throughout the game?
 				:)")
+				text_box.inChat=false
 
 		#attic2
 		elif globals.npcTriggered.has("cat") and globals.npcTriggered["cat"]:
@@ -134,6 +142,7 @@ func _process(delta):
 		#intro
 		else:
 			get_tree().change_scene_to_file("scenes/attic1.tscn")
+			audio.playMusic("backgroundNoise0")
 
 
 func textReady():

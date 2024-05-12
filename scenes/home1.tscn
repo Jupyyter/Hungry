@@ -45,7 +45,7 @@ offset = Vector2(0, 4)
 
 [node name="veranda" type="Sprite2D" parent="StaticBody2D/hause"]
 y_sort_enabled = true
-position = Vector2(-79, 74.5)
+position = Vector2(-44, 61)
 texture = ExtResource("3_k7b1w")
 offset = Vector2(0, -27)
 
@@ -94,7 +94,7 @@ offset = Vector2(0, -16)
 
 [node name="miguel" type="Sprite2D" parent="StaticBody2D/hause"]
 y_sort_enabled = true
-position = Vector2(169.5, 39)
+position = Vector2(-258.5, 39)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("11_w2u2a")
 offset = Vector2(0, -20)

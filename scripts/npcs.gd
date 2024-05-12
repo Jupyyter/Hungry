@@ -191,10 +191,7 @@ func _process(delta):
 								"Miguel died
 								his last words where \"i need more bullets, please sir give me more bullets\"",
 							
-								"your siblings
-								see that one in the corner?
-								he's Schnitzel
-								go to him and say the word \"crazy\" "])
+								"idk"])
 							2:
 								endOfChat()
 					"snitel":
@@ -252,7 +249,7 @@ func _process(delta):
 						get_tree().change_scene_to_file("scenes/home3.tscn")
 					"bed":
 						if globals.npcTriggered.has("knife") and globals.npcTriggered["knife"]:
-							text_box.queue_text(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)--0.01--red")
+							text_box.queue_text(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)--0.001--red")
 							inChat=false
 						else:
 							text_box.queue_text("but gabriel is still hungry")
@@ -319,8 +316,7 @@ func _process(delta):
 					"miguel":
 						match npcConv:
 							0:
-								text_box.queue_text("(he is trembling either because her saw your biceps or he is poisoned)
-								(imagine the next text as mumbling)
+								text_box.queue_text("(imagine the next text as mumbling)
 								bullets bulletsbulletsbullets bulletsbulletsbullets bullets bulletsbullets bulletsbullets 
 								i need more of them (bullets)
 								yes
@@ -779,7 +775,8 @@ func _process(delta):
 								she cook
 								she great wife
 								me ride wife
-								but when she turn 15 she fight back
+								life good
+								but when turn 15 wife fight back
 								me hit wife
 								wife die
 								think about wife
@@ -848,7 +845,8 @@ func _process(delta):
 								no")
 								text_box.queue_text("how does a cannibal sees a pregnant woman?
 								AS A KINDER-SURPRISE
-								HAHAHAHAHHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHA")
+								HAHAHAHAHHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHA
+								(kinder surprises are banned in america)")
 								endOfChat(npcConv+1)
 					"door2":
 						get_tree().change_scene_to_file("scenes/hallWay1.tscn")
@@ -872,19 +870,56 @@ func _process(delta):
 							0:
 								text_box.queue_text("please sir that leg over there was passed in my family from generation to generation
 								its the most precious thing i have")
-								text_box.queue_questionResponse("i eat cats 4 fun
-								bark
-								14")
+								text_box.queue_questionResponse("bark
+								can you swear on paul's dead grandmother?")
 								npcConv+=1
 							1:
 								if textReady():
+									match text_box.IndexChosen:
+										0:
+											npcConv+=3
+										1:
+											text_box.queue_text("i swear on paul's dead grandmother")
+											npcConv+=5
+							2:
+								if textReady():
 									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
 									npcConv+=1
-							2:	
+							3:	
 								text_box.hide_textbox()
 								if globals.getPlayer().animationFinished():
 									
-									endOfChat(npcConv+1)
+									endOfChat(999)
+							4:
+								if textReady():
+									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
+									npcConv+=1
+							5:	
+								text_box.hide_textbox()
+								if globals.getPlayer().animationFinished():
+									text_box.queue_text("while barking you accidentally ate his foot")
+									endOfChat(999)
+							6:
+								text_box.queue_questionResponse("eat his leg anyway
+								eat his leg later")
+								npcConv+=1
+							7:
+								if textReady():
+									match text_box.IndexChosen: 
+										0:
+											npcConv=2
+										1:
+											npcConv=8
+							8:
+								if textReady():
+									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
+									npcConv+=1
+							9:	
+								text_box.hide_textbox()
+								if globals.getPlayer().animationFinished():
+									text_box.queue_text("you accidentally barked and in the process of barking you ate his leg")
+									endOfChat(999)
+								
 			"bloodRoom2":
 					match npcName:
 						"bobiJoke":
@@ -989,7 +1024,8 @@ func endOfChat(npcConvv:int=-1):
 	if text_box.text_queue.is_empty() and text_box.conv_queue.is_empty(): #i should be executed for this
 		text_box.hide_textbox()#this is morally wrong in many ways
 		#the reason i do this is because in between some statements text text_box.current_state==text_box.State.ready and it makes the textbox disappear for 1 frame and it looks bad
-#5am
+#5am new record
+#https://cdn.discordapp.com/attachments/969231182304784446/1166194592174055444/image.png?ex=65499a59&is=65372559&hm=7b00bca663bdece811d1083fbc48cc03070be3b82cf9c3925ad1da932786d9c4&
 #:):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)
 """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣿⣟⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -8,17 +8,9 @@ path="res://.godot/imported/skeleton6.wav-adfa29d7c1a62b8db17273d39f38c7da.sampl
 [deps]
 
 source_file="res://sounds/skeleton/skeleton6.wav"
-dest_files=["res://.godot/imported/skeleton6.wav-adfa29d7c1a62b8db17273d39f38c7da.sample"]
+dest_files=PackedStringArray("res://.godot/imported/skeleton6.wav-adfa29d7c1a62b8db17273d39f38c7da.sample")
 
 [params]
 
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
+dummy_value_ignore_me=0
 compress/mode=0

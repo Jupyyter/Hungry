@@ -8,12 +8,8 @@ path="res://.godot/imported/voidSound.mp3-880752fcf0858827d6cac383cc30ba96.mp3st
 [deps]
 
 source_file="res://sounds/voidSound.mp3"
-dest_files=["res://.godot/imported/voidSound.mp3-880752fcf0858827d6cac383cc30ba96.mp3str"]
+dest_files=PackedStringArray("res://.godot/imported/voidSound.mp3-880752fcf0858827d6cac383cc30ba96.mp3str")
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+dummy_value_ignore_me=0

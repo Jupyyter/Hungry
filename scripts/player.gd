@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name player
 
 var speedMultiplier:float=1
-var speed:int=75
+var speed:int=40
 var flipped:bool=false
 var nearLadder:bool=false
 var atticStartPos=Vector2i(147,227)
@@ -33,13 +33,9 @@ func get_input()->void:
 	#dont move while the textbox is on
 	if inAnimation or text_box.isOn():
 		velocity=Vector2.ZERO
-	
-	print(lastNpcInteracted)
-	if !text_box.inChat and globals.npcTriggered.has(lastNpcInteracted) and globals.npcRef[lastNpcInteracted]!=null and globals.npcTriggered[lastNpcInteracted]:
-		globals.npcRef[lastNpcInteracted].queue_free()
 
-	if globals.npcTriggered.has(lastNpcInteracted):
-		print( globals.npcTriggered[lastNpcInteracted])
+	if !text_box.inChat and globals.npcTriggered.has(lastNpcInteracted) and globals.npcRef[lastNpcInteracted]!=null and (globals.npcTriggered[lastNpcInteracted]or globals.npcRef[lastNpcInteracted].visible==false) :
+		globals.npcRef[lastNpcInteracted].queue_free()
 	
 	if velocity!=Vector2(0,0):
 		if input_direction.x<0:
