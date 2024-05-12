@@ -870,55 +870,19 @@ func _process(delta):
 							0:
 								text_box.queue_text("please sir that leg over there was passed in my family from generation to generation
 								its the most precious thing i have")
-								text_box.queue_questionResponse("bark
-								can you swear on paul's dead grandmother?")
+								text_box.queue_questionResponse("i eat cats 4 fun
+								bark
+								14")
 								npcConv+=1
 							1:
 								if textReady():
-									match text_box.IndexChosen:
-										0:
-											npcConv+=3
-										1:
-											text_box.queue_text("i swear on paul's dead grandmother")
-											npcConv+=5
-							2:
-								if textReady():
 									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
 									npcConv+=1
-							3:	
+							2:	
 								text_box.hide_textbox()
 								if globals.getPlayer().animationFinished():
 									
-									endOfChat(999)
-							4:
-								if textReady():
-									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
-									npcConv+=1
-							5:	
-								text_box.hide_textbox()
-								if globals.getPlayer().animationFinished():
-									text_box.queue_text("while barking you accidentally ate his foot")
-									endOfChat(999)
-							6:
-								text_box.queue_questionResponse("eat his leg anyway
-								eat his leg later")
-								npcConv+=1
-							7:
-								if textReady():
-									match text_box.IndexChosen: 
-										0:
-											npcConv=2
-										1:
-											npcConv=8
-							8:
-								if textReady():
-									globals.getPlayer().eat(globals.npcRef[npcName],"grapefruit",false)
-									npcConv+=1
-							9:	
-								text_box.hide_textbox()
-								if globals.getPlayer().animationFinished():
-									text_box.queue_text("you accidentally barked and in the process of barking you ate his leg")
-									endOfChat(999)
+									endOfChat(npcConv+1)
 								
 			"bloodRoom2":
 					match npcName:
