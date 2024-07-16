@@ -158,21 +158,11 @@ func _process(delta):
 							0:
 								text_box.queue_text("im Noodle Doodle-Doo")
 								text_box.queue_questionResponse("you look like you got run over by a car")
-								text_box.queue_text("no, this is how i was born")
-								text_box.queue_questionResponse("oh so you were born run over by a car?")
-								text_box.queue_text("yes got a probblem with people born run over by cars?")
+								text_box.queue_text("this is how i was born")
+								text_box.queue_questionResponse("so you were first run over by a car and then you were born?")
+								text_box.queue_text("you are so funny (-(-_-(-_(-_(-_-)_-)-_-)_-)-)")
 								npcConv+=1
 							1:
-								if textReady():
-									conversation(["no, i personally was born run over by a traktor",
-
-									"yes, i im very racist. i hate everyone run over by anything but men. in fact i hate every person with a slightly darker RGBA skin color than mine",
-
-									"fair enough",
-
-									"ah is that so?
-									i wish you a night full of warm pillows"],[0,1])
-							2:
 								endOfChat()
 							
 					"salami":
@@ -199,7 +189,7 @@ func _process(delta):
 							0:
 								text_box.queue_text("go away")
 								text_box.queue_questionResponse("crazy
-								crazy bastard")
+								crazy crazy")
 								npcConv+=1
 							1:
 								if textReady():
@@ -277,12 +267,8 @@ func _process(delta):
 						match npcConv:
 							0:
 								text_box.queue_questionResponse("who are you and why are you in my home")
-								text_box.queue_text("AAAAAAHHGGGGGHAAAAAAAHGGGGGGGHHHHHHH FLAPJACK
-								*sounds of agony and pain*
-								IIHHHHHHH PLYYYYYYYYYY HHYROOOOES OFFFFF DAAAAAA STROOOOOOOOOOOOOM
-								(imagine playing Heroes of the Storm)")
-								text_box.queue_questionResponse("so thats why you look like the Rake?")
-								text_box.queue_text("(just my opinion but you look like mini-putin)")
+								text_box.queue_text("AAAAAAHHGGGGGHAAAAAAAHGGGGGGGHHHHHHH")
+								text_box.queue_questionResponse("why do look like the Rake?")
 								npcConv+=1
 							1:
 								if textReady():
@@ -298,7 +284,7 @@ func _process(delta):
 								if textReady():
 									conversation(["where is Noodle Doodle-Doo",
 									"have you ever thought about switching from windows to AmogOS?",
-									"he got run over by a bicycle",
+									"he got run over by a traktor",
 									"no
 									i use LindowsOS"])
 							2:
@@ -316,13 +302,10 @@ func _process(delta):
 					"miguel":
 						match npcConv:
 							0:
-								text_box.queue_text("(imagine the next text as mumbling)
-								bullets bulletsbulletsbullets bulletsbulletsbullets bullets bulletsbullets bulletsbullets 
-								i need more of them (bullets)
+								text_box.queue_text("i need more of them (bullets)
 								yes
 								and bigger weapons (weapons)
 								i love bigger weapons
-								yes yes yes yes yes
 								i need more bullets (and bigger weapons)")
 								endOfChat(npcConv+1)
 
@@ -352,26 +335,26 @@ func _process(delta):
 								if globals.getPlayer().animationFinished():
 									
 									text_box.queue_text("you ate the raw potato
-									yummy yummy raw potato full of dirt
 									but gabriel hungry
-									no more food gabriel sad
+									no more food
 									(imagine beeng poor)
 									it might be amimir time (amimir = speel)")
 									endOfChat(npcConv+2)
 							3:
 								if globals.getPlayer().animationFinished():
 									
-									text_box.queue_text("you accidentally ate the raw potato
-									yummy yummy raw potato full of dirt
+									text_box.queue_text("you ate the raw potato
 									but gabriel hungry
-									no more food gabriel sad
+									no more food
 									(imagine beeng poor)
 									it might be amimir time (amimir = speel)")
 									endOfChat(npcConv+1)
+
+									
 					"veranda":
 						match npcConv:
 							0:
-								text_box.queue_text(":)
+								text_box.queue_text("...
 								i am mommy")
 								npcConv+=1
 							1:
@@ -379,14 +362,12 @@ func _process(delta):
 
 								"hi mommy, give me food please",
 								
-								"when you were born, your dad wanted to shoot you
-								the bullet came out a little and said \"i don't enter in in this thing\"
-								he threw a grenade at you. it stopped in the air and said \"what more damage can i do to him?\"
-								after some time he gave up and left",
+								"guess
+								i heavent seen him in 5 years",
 
 								"you hungry?
 								skill issue
-								dont be hungry anymore"])
+								think twice before being poor"])
 							2:
 								endOfChat()
 								
@@ -405,9 +386,9 @@ func _process(delta):
 
 									"i want to play Raid Shadow Legends, one of the biggest mobile role-playing games of 2019 and it's totally free! Currently almost 10 million users have joined Raid over the last six months, and it's one of the most impressive games in its class with detailed models, environments and smooth 60 frames per second animations! All the champions in the game can be customized with unique gear that changes your strategic buffs and abilities! The dungeon bosses have some ridiculous skills of their own and figuring out the perfect party and strategy to overtake them's a lot of fun! Currently with over 300,000 reviews, Raid has almost a perfect score on the Play Store! The community is growing fast and the highly anticipated new faction wars feature is now live, you might even find my squad out there in the arena! It's easier to start now than ever with rates program for new players you get a new daily login reward for the first 90 days that you play in the game! So what are you waiting for? Go to the video description, click on the special links and you'll get 50,000 silver and a free epic champion as part of the new player program to start your journey! Good luck and I'll see you there!",
 
-									"me monke me want food im afraid to touch grass unlimited food glitch? i dont go outside yellow ball in the sky shooting lasers to slowly kill me",
+									"get some",
 									
-									"don't you want to suck my di--fast--0.03
+									"don't you want to--fast--0.03
 									:)"])
 							2:
 								endOfChat(npcConv+1)
@@ -415,9 +396,7 @@ func _process(delta):
 						match npcConv:
 							0:
 
-								text_box.queue_text("(keep in mind \"it's ok to like muscular men\"- gabriel)
-								(its in gabriel's interest to avoid women)
-								hi im Sussy")
+								text_box.queue_text("hi im Sussy")
 								text_box.queue_questionResponse("i play league of legends")
 								text_box.queue_text("that explains the smell
 								take a shower
@@ -455,14 +434,14 @@ func _process(delta):
 								if globals.getPlayer().animationFinished():
 									
 									text_box.queue_text("you ate the raw beans
-									did you know that raw beans are toxic?
+									it may be toxic but whatever
 									amimir time")
 									endOfChat(npcConv+2)
 							3:
 								if globals.getPlayer().animationFinished():
 									
 									text_box.queue_text("you accidentally ate the raw beans
-											did you know that raw beans are toxic?
+											it may be toxic but whatever
 											...
 											amimir time")
 									endOfChat(npcConv+1)
@@ -492,7 +471,6 @@ func _process(delta):
 						match npcConv:
 							0:
 								text_box.queue_text("did you know cannibalism is not illegal?")
-								text_box.queue_text("(yeah imagine something like eating your own brother wtf)")
 								endOfChat(npcConv+1)
 					"bucket":
 						match npcConv:
@@ -632,8 +610,8 @@ func _process(delta):
 						match npcConv:
 							0:
 								text_box.queue_text("good morning sir
-								your story of eating that stop sign inspired me
-								thank you you changedmy life
+								your story of eating that brick wall inspired me
+								thank you you changed my life
 								can you eat this basket of corks in 1 secod?")
 								text_box.queue_questionResponse("my pleasure")
 								npcConv+=1
@@ -645,11 +623,7 @@ func _process(delta):
 					"stranger3":
 						match npcConv:
 							0:
-								text_box.queue_text("omg its mister gabriel himself
-								big fan big fan
-								is it true the you restarted a pc once?")
-								text_box.queue_questionResponse("yes")
-								text_box.queue_text("omg i knew it
+								text_box.queue_text("hello sir
 								you are my idol
 								when i grow up, i want to eat brick walls just like you
 								can you eat this basket of rocks in 0.5 secod?")
@@ -725,7 +699,7 @@ func _process(delta):
 					"basketOfApples2":
 						match npcConv:
 							0:
-								globals.getPlayer().eat(globals.npcRef[npcName],"moan")
+								globals.getPlayer().eat(globals.npcRef[npcName])
 								npcConv=+1
 							1:
 								if globals.getPlayer().animationFinished():
@@ -774,9 +748,7 @@ func _process(delta):
 								text_box.queue_text("i once had a wife
 								she cook
 								she great wife
-								me ride wife
 								life good
-								but when turn 15 wife fight back
 								me hit wife
 								wife die
 								think about wife
@@ -785,7 +757,7 @@ func _process(delta):
 					"doctor2":
 						match npcConv:
 							0:
-								text_box.queue_text("i was black once")
+								text_box.queue_text("you are my favorite pokemon")
 								endOfChat(npcConv+1)
 					"door1":
 						get_tree().change_scene_to_file("scenes/hallWay1.tscn")
@@ -846,7 +818,7 @@ func _process(delta):
 								text_box.queue_text("how does a cannibal sees a pregnant woman?
 								AS A KINDER-SURPRISE
 								HAHAHAHAHHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHA
-								(kinder surprises are banned in america)")
+								(kinder surprises are banned in the US)")
 								endOfChat(npcConv+1)
 					"door2":
 						get_tree().change_scene_to_file("scenes/hallWay1.tscn")
@@ -901,7 +873,7 @@ func _process(delta):
 						"yuumi":
 							match npcConv:
 								0:
-									text_box.queue_text("(this is georgeWashingMachine)
+									text_box.queue_text("(this is Bartolomeo)
 									(he is unconscious)")
 									text_box.queue_questionResponse("borrow his limbs")
 									npcConv+=1

@@ -54,7 +54,6 @@ func _ready():
 		language in general: 1/10
 		physique: very big
 		note: he is very hungry
-		quote: \"it's ok to like muscular men\"
 		idk lets start--red")
 
 
