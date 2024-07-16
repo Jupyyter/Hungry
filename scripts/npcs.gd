@@ -960,9 +960,6 @@ func endOfChat(npcConvv:int=-1):
 	if text_box.text_queue.is_empty() and text_box.conv_queue.is_empty(): #i should be executed for this
 		text_box.hide_textbox()#this is morally wrong in many ways
 		#the reason i do this is because in between some statements text text_box.current_state==text_box.State.ready and it makes the textbox disappear for 1 frame and it looks bad
-#5am new record
-#https://cdn.discordapp.com/attachments/969231182304784446/1166194592174055444/image.png?ex=65499a59&is=65372559&hm=7b00bca663bdece811d1083fbc48cc03070be3b82cf9c3925ad1da932786d9c4&
-#:):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)
 """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣿⣟⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
