@@ -338,7 +338,7 @@ func _process(delta):
 									but gabriel hungry
 									no more food
 									(imagine beeng poor)
-									it might be amimir time (amimir = speel)")
+									it might be amimir time (amimir = sleep)")
 									endOfChat(npcConv+2)
 							3:
 								if globals.getPlayer().animationFinished():
@@ -627,8 +627,8 @@ func _process(delta):
 								you are my idol
 								when i grow up, i want to eat brick walls just like you
 								can you eat this basket of rocks in 0.5 secod?")
-								text_box.queue_questionResponse("i can eat it in less then 0.1 seconds
-								i can eat your whole family in less than 0.1 seconds")
+								text_box.queue_questionResponse("yes
+								yes")
 								npcConv+=1
 							1:
 								if textReady():
