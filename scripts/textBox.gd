@@ -79,8 +79,6 @@ func _process(delta):
 					chooseMode=false
 					fastText=false
 					if text_queue.is_empty() and conv_queue.is_empty() and !inChat:
-						#DELETE ALL THE CHILDREN DIEDIEDIEDIEDIE
-						#GABRIEL EATING MY MEMORY HAHAHAHAHAHAHAHAAHAHAHAHAHAHAHAAHAHAHAHAHAHAAHAHA
 						hide_textbox()
 
 
