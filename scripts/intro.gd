@@ -146,8 +146,6 @@ func _process(delta):
 
 func textReady():
 	return text_box.current_state==text_box.State.ready
-#its 4:24 AM, i havent slept yet and i have to go to school in 3 hours and 20
-#yesterday i fell asleep around 6.30 am and overslept. because of that i missed the math test (integrals) (wtf americans dont do integrals by default in highschool:))
 """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠴⢚⡭⠖⠒⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠐⠦⠥⣒⣢⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⣠⠋⣴⣏⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠿⣗⡤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
